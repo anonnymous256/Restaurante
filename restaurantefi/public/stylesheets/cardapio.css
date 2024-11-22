@@ -1,0 +1,159 @@
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: gainsboro; 
+    color: #ffffff; 
+}
+header {
+    font-family: 'Allura', cursive;
+    display: flex;              
+    flex-direction: column;     
+    align-items: center;        
+    background-color: #7c0a02;     
+    color: white;               
+    padding: 20px;        
+}
+
+header img {
+    max-width: 150px;
+    padding: 10px;
+    border-radius: 90px; 
+    object-fit: cover;        
+}
+
+header h1 {
+    margin: 0;                  
+    font-size: 3.0rem;         
+}
+
+header h5 {
+    color: rgb(161, 120, 15);
+    margin: 0;                  
+    font-size: 1.5rem;       
+}
+
+.cardapio-section {
+    margin: 4rem auto;
+    max-width: 1200px;
+    padding: 0 15px;
+}
+
+.cardapio-category {
+    margin-bottom: 4rem;
+}
+
+.cardapio-category h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-bottom: 3px solid #8b0000;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: #8b0000;
+}
+
+
+.card-item {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.card-item .content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+    min-width: 0; 
+}
+
+.card-item .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.card-item .card-description {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.5rem 0;
+}
+
+.card-item .card-price {
+    font-size: 1.5rem;
+    color: #8b0000;
+    font-weight: bold;
+    margin-top: auto; 
+}
+
+.quantity-input {
+    width: 60px;
+    margin-left: auto; 
+}
+
+.btn-pedido {
+    display: inline-block;
+    background-color: #8b0000;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.btn-pedido:hover {
+    background-color: #b22222;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 5rem;
+}
+
+footer p {
+    font-size: 1.1rem;
+}
+
+
+@media (max-width: 768px) {
+    .card-item {
+        flex-direction: column;
+        text-align: center; 
+    }
+    .card-item img {
+        margin-bottom: 1rem; 
+    }
+    .quantity-input {
+        margin: 1rem auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-item .card-title {
+        font-size: 1.2rem;
+    }
+    .card-item .card-description {
+        font-size: 0.9rem;
+    }
+}
+
+

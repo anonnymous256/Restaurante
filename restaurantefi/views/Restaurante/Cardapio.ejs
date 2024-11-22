@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantinho do Sabor - Cardápio</title>
+    <link rel = "stylesheet" href ="stylesheets/cardapio.css">
+    <link rel = "stylesheet" href ="stylesheets/carrinho.css">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+<header>
+    <a href = "/">
+    <img src="images/logo.png" alt="Logo do Restaurante">
+    </a>
+        <h1>Restaurante dos Granolas</h1>
+        <h5>Delicias Refinadas</h5>
+          
+</header>
+
+
+<!-- Cardápio -->
+<div class="container cardapio-section">
+    <h2 class="text-center mb-5" style="font-size: 2.5rem; color: #8b0000; text-align: center">Nosso Cardápio</h2>
+
+    <!-- Formulário de Pedido -->
+    <form action="/finalizar_pedido" method="POST">
+        
+        <!-- Categoria de Pratos Principais -->
+        <div class="cardapio-category">
+            <h3>Massas</h3>
+            <!-- Lasanha -->
+            <div class="card-item">
+                <img src="images/Cardapio/lasanhacar.jpg" alt="Feijoada">
+                <div class="content">
+                    <div class="card-title">Lasanha</div>
+                    <div class="card-description"> Uma deliciosa feijoada com arroz, farofa e couve. Perfeita para compartilhar!</div>
+                    <div class="card-price" id="price_feijoada">R$ 45,00</div>
+                </div>
+                <div>
+                    <input type="number" name="quantidade_feijoada" class="quantity-input" value="0" min="0"  data-price="45.00" onchange="AtualizarPreco()">
+                </div>
+            </div>
+
+            <!-- Pizza -->
+            <div class="card-item">
+                <img src="images/Cardapio/pizzacar.jpg" alt="Bife Acebolado">
+                <div class="content">
+                    <div class="card-title">Pizza</div>
+                    <div class="card-description">Bife suculento acompanhado de arroz, feijão e batata.</div>
+                    <div class="card-price" id="price_bife">R$ 39,90</div>
+                </div>
+                <div>
+                    <input type="number" name="quantidade_bife" class="quantity-input" value="0" min="0" data-price="39.90" onchange="AtualizarPreco()">
+                </div>
+            </div>
+
+            <!-- Panqueca -->
+            <div class="card-item">
+                <img src="images/Cardapio/panquecacar.jpg" alt="Moqueca de Peixe">
+                <div class="content">
+                    <div class="card-title">Panqueca</div>
+                    <div class="card-description">Peixe fresco em molho de coco e dendê, servido com arroz branco.</div>
+                    <div class="card-price" id="price_moqueca">R$ 59,90</div>
+                </div>
+                <div>
+                    <input type="number" name="quantidade_moqueca" class="quantity-input" value="0" min="0"  data-price="59.90" onchange="AtualizarPreco()">
+                </div>
+            </div>
+
+            <!-- Macarrão -->
+            <div class="card-item">
+                <img src="images/Cardapio/macaraocar.jpg" alt="Moqueca de Peixe">
+                <div class="content">
+                    <div class="card-title">Macarrão ao molho branco</div>
+                    <div class="card-description">Peixe fresco em molho de coco e dendê, servido com arroz branco.</div>
+                    <div class="card-price" id="price_moqueca">R$ 59,90</div>
+                </div>
+                <div>
+                    <input type="number" name="quantidade_moqueca" class="quantity-input" value="0" min="0"  data-price="59.90" onchange="AtualizarPreco()">
+                </div>
+            </div>
+
+        <!-- Categoria de Lanches -->
+<div class="cardapio-category">
+    <h3>Lanches</h3>
+
+    <!-- Hambúrguer Artesanal -->
+    <div class="card-item">
+        <img src="images/Carroselimg/sorvete3.jpg" alt="Hambúrguer Artesanal">
+        <div class="content">
+            <div class="card-title">Hambúrguer Artesanal</div>
+            <div class="card-description">Pão macio com hambúrguer artesanal, queijo, alface, tomate e molho especial.</div>
+            <div class="card-price" id="price_hamburguer_artesanal">R$ 29,90</div>
+        </div>
+        <div>
+            <input type="number" name="quantidade_hamburguer" class="quantity-input" value="0" min="0" data-price="29.90" onchange="AtualizarPreco()">
+        </div>
+    </div>
+
+    <!-- Sanduíche de Frango -->
+    <div class="card-item">
+        <img src="images/Carroselimg/sorvete3.jpg" alt="Sanduíche de Frango">
+        <div class="content">
+            <div class="card-title">Sanduíche de Frango</div>
+            <div class="card-description">Sanduíche de frango grelhado com alface, tomate e molho de iogurte.</div>
+            <div class="card-price" id ="price_sanduiche_frango">R$ 19,90</div>
+        </div>
+        <div>
+            <input type="number" name="quantidade_sanduiche_frango" class="quantity-input" value="0" min="0"  data-price="19.90" onchange="AtualizarPreco()">
+        </div>
+    </div>
+
+    <!-- Hot Dog -->
+    <div class="card-item">
+        <img src="images/Carroselimg/sorvete3.jpg" alt="Hot Dog">
+        <div class="content">
+            <div class="card-title">Hot Dog</div>
+            <div class="card-description">Cachorro-quente com salsicha, molho de tomate, batata palha e milho.</div>
+            <div class="card-price" id="price_hotdog">R$ 12,00</div>
+        </div>
+        <div>
+            <input type="number" name="quantidade_hotdog" class="quantity-input" value="0" min="0"  data-price="12.00" onchange="AtualizarPreco()">
+        </div>
+    </div>
+
+    <!-- Pastel de Carne -->
+    <div class="card-item">
+        <img src="images/Carroselimg/sorvete3.jpg" alt="Hot Dog">
+        <div class="content">
+            <div class="card-title">Pastel de Carne</div>
+            <div class="card-description">Pastel de Carne com muita ca</div>
+            <div class="card-price" id="price_hotdog">R$ 12,00</div>
+        </div>
+        <div>
+            <input type="number" name="quantidade_hotdog" class="quantity-input" value="0" min="0"  data-price="12.00" onchange="AtualizarPreco()">
+        </div>
+    </div>
+
+    <!-- Coxinha -->
+    <div class="card-item">
+        <img src="images/Carroselimg/sorvete3.jpg" alt="Coxinha">
+        <div class="content">
+            <div class="card-title">Coxinha</div>
+            <div class="card-description">Coxinha crocante com recheio de frango desfiado e temperado.</div>
+            <div class="card-price" id="price_coxinha">R$ 6,00</div>
+        </div>
+        <div>
+            <input type="number" name="quantidade_coxinha" class="quantity-input" value="0" min="0"  data-price="6.00" onchange="AtualizarPreco()">
+        </div>
+    </div>
+</div>
+
+
+        <!-- Categoria de Sobremesas -->
+        <div class="cardapio-category">
+            <h3>Sobremesas</h3>
+
+            <!-- Pudim -->
+            <div class="card-item">
+                <img src="images/Carroselimg/sorvete3.jpg" alt="Pudim">
+                <div class="content">
+                    <div class="card-title">Pudim</div>
+                    <div class="card-description">Clássico pudim de leite condensado com caramelo.</div>
+                    <div class="card-price" id="price_pudim">R$ 12,00</div>
+                </div>
+                <div>
+                    <input type="number" name="quantidade_pudim" class="quantity-input" value="0" min="0" data-price="12.00" onchange="AtualizarPreco()">
+                </div>
+            </div>
+
+            <!-- Torta de Limão -->
+            <div class="card-item">
+                <img src="images/Carroselimg/sorvete3.jpg" alt="Torta de Limão">
+                <div class="content">
+                    <div class="card-title">Torta de chocolate</div>
+                    <div class="card-description">Torta cremosa com base crocante e recheio de chocolate.</div>
+                    <div class="card-price" id="price_torta">R$ 15,00</div>
+                </div>
+                <div>
+                    <input type="number" name="quantidade_torta_limao" class="quantity-input" value="0" min="0"  data-price="15.00" onchange="AtualizarPreco()">
+                </div>
+            </div>
+        </div>
+
+<!-- Categoria de Bebidas -->
+<div class="cardapio-category">
+    <h3>Bebidas</h3>
+
+    <!-- Suco Natural -->
+    <div class="card-item">
+        <img src="images/Carroselimg/sorvete3.jpg" alt="Suco Natural">
+        <div class="content">
+            <div class="card-title">Suco Natural</div>
+            <div class="card-description">Escolha entre laranja, abacaxi ou maracujá. Natural e refrescante!</div>
+            <div class="card-price" id="price_suco">R$ 10,00</div>
+        </div>
+        <div>
+            <input type="number" name="quantidade_suco" class="quantity-input" value="0" min="0" data-price="10.00" onchange="AtualizarPreco()">
+        </div>
+    </div>
+
+    <!-- Refrigerante -->
+    <div class="card-item">
+        <img src="images/Carroselimg/sorvete3.jpg" alt="Refrigerante" class="card-image">
+        <div class="content">
+            <div class="card-title">Refrigerante</div>
+            <div class="card-description">Escolha entre Coca-Cola, Fanta ou Guaraná.</div>
+            <div class="card-price" id="price_refrigerante">R$ 8,00</div>
+        </div>
+        <div class="quantity-container">
+            <label for="quantidade_refrigerante">Quantidade:</label>
+            <input 
+                type="number" 
+                id="quantidade_refrigerante" 
+                name="quantidade_refrigerante" 
+                class="quantity-input" 
+                value="0" 
+                min="0" 
+                data-price="8.00" 
+                onchange="adicionarAoCarrinho('Refrigerante', 8.00,'images/Carroselimg/sorvete3.jpg', this.value)">
+        </div>
+    </div>
+
+    <div class="card-item">
+        <img src="images/Cardapio/lasanhacar.jpg" alt="Cerveja Artesanal">
+        <div class="content">
+            <div class="card-title">Cerveja Artesanal</div>
+            <div class="card-description">Cerveja artesanal gelada, com diferentes sabores.</div>
+            <div class="card-price" id="price_cerveja">R$ 15,00</div>
+        </div>
+        <div>
+            <input type="number" name="quantidade_cerveja" class="quantity-input" value="0" min="0" id="feijoada" data-name="Lasanha" data-price="15.00" onchange="adicionarAoCarrinho('lasanha', 20.00,'images/Cardapio/lasanhacar.jpg', this.value)">
+        </div>
+    </div>
+</div>
+    </form>
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center mt-4 py-3">
+
+     <p>Aguardamos sua visita!<br>
+       Rua Ipanema, 1243 - Rio de Janeiro<br>
+       Telefone: (75) 98898-8547</p> 
+</footer>
+
+
+
+<div id="carrinho-modal" class="modal">
+    <div class="modal-content">
+        <span class="fechar">&times;</span>
+        <h2>Carrinho de Compras</h2>
+        <ul id="modal-carrinho-itens"></ul>
+        <div id="modal-total" class="modal-total">Total: R$ 0,00</div>
+    </div>
+</div>
+
+<!-- Ícone do carrinho -->
+<i id="abrir-modal" class="fas fa-shopping-cart"></i>
+
+
+<script src="/javascripts/AtualizarPreco.js"></script>
+<script src="/javascripts/Carrinho.js"></script>
+
+
+
+</body>
+</html>
