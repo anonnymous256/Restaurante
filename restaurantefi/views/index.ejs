@@ -1,31 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurante Sabor Gourmet</title>
     <link rel="stylesheet" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="/stylesheets/modal.css">
+
     <head>
-      <link href="https://fonts.googleapis.com/css2?family=Allura&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-  </head>
-  
+        <link
+            href="https://fonts.googleapis.com/css2?family=Allura&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
+    </head>
+
 </head>
+
 <body>
+
+    <button class = "whatssap" onclick="window.location.href = 'https:wa.me/5575992834894?text=Olá,%20gostaria%20de%20mais%20informações';">
+        Fale Conosco no WhatsApp
+    </button>
+    
+
+    <!-- Modal de Login -->
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form" onsubmit="event.preventDefault(); ConferirSenha();">
+                <label for="adminPassword">Senha:</label>
+                <input type="password" id="adminPassword" name="senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Logo e título -->
     <header>
         <img src="images/logo.png" alt="Logo do Restaurante">
         <h1>Restaurante dos Granolas</h1>
-        <h5>Delicias Refinadas</h5>  
+        <h5>Delicias Refinadas</h5>
         <div class="organizar-botoes">
-        <button class = "Ircardapio" onclick ="window.location.href = '/Cardapio'">Cardapio</button>
-        <button class = "Logar" onclick = "window.location.href = '/login'">Logar</button>
+            <button class="Ircardapio" onclick="window.location.href = '/Cardapio'">Cardapio</button>
+            <button class="Logar" onclick="abrirModal()">Logar</button>
         </div>
     </header>
 
     <!-- Introdução -->
     <div class="intro">
-        <p>Bem-vindo ao Restaurante Sabor Gourmet! Experimente pratos únicos e deliciosos preparados com os melhores ingredientes.</p>
+        <p>Bem-vindo ao Restaurante Sabor Gourmet! Experimente pratos únicos e deliciosos preparados com os melhores
+            ingredientes.</p>
     </div>
 
     <!-- Carrossel de pratos -->
@@ -56,26 +81,28 @@
             <img src="images/Carroselimg/sorvete3.jpg" alt="Prato 3">
             <p>Prato 3 - Uma combinação perfeita de ingredientes.</p>
         </div>
-     </div>
-     <!-- Depoimentos -->
+    </div>
+    <!-- Depoimentos -->
     <div class="depoimentos">
-      <h2>O que nossos clientes dizem</h2>
-      <div class="depoimento">
-          <img src="images/clienteTamis.jpg" alt="Cliente 1">
-          <p><strong>Tamires Almeida</strong></p>
-          <p>"O melhor restaurante da cidade! Os pratos são deliciosos e o atendimento é impecável."</p>
-      </div>
-      <div class="depoimento">
-          <img src="images/clienteEmilly.jpg" alt="Cliente 2">
-          <p><strong>Emilly Ferreira</strong></p>
-          <p>"Ambiente acolhedor e pratos incríveis! Com certeza voltarei mais vezes."</p>
-      </div>
-  </div>
-    
+        <h2>O que nossos clientes dizem</h2>
+        <div class="depoimento">
+            <img src="images/clienteTamis.jpg" alt="Cliente 1">
+            <p><strong>Tamires Almeida</strong></p>
+            <p>"O melhor restaurante da cidade! Os pratos são deliciosos e o atendimento é impecável."</p>
+        </div>
+        <div class="depoimento">
+            <img src="images/clienteEmilly.jpg" alt="Cliente 2">
+            <p><strong>Emilly Ferreira</strong></p>
+            <p>"Ambiente acolhedor e pratos incríveis! Com certeza voltarei mais vezes."</p>
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; 2024 Restaurante Sabor Gourmet. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Restaurante La Granolas. Todos os direitos reservados.</p>
     </footer>
 
     <script src="/javascripts/carrosel.js"></script>
+    <script src="/javascripts/modal.js"></script>
 </body>
+
 </html>

@@ -51,13 +51,13 @@
                 </div>
             </div>
 
-            <!-- Pizza -->
+            <!-- Pomodoro -->
             <div class="card-item">
-                <img src="images/Cardapio/pizzacar.jpg" alt="Bife Acebolado">
+                <img src="images/Cardapio/pomodoro.jpg" alt="Bife Acebolado">
                 <div class="content">
-                    <div class="card-title">Pizza</div>
+                    <div class="card-title">Pomodoro</div>
                     <div class="card-description">Pizza com massa fina,queijo e ingredientes frescos como carnes e vegetais. Assada até crocante.</div>
-                    <div class="card-price" id="price_bife">R$ 39,90</div>
+                    <div class="card-price" id="price_bife">R$ 18,00</div>
                 </div>
                 <div>
                     <input 
@@ -68,7 +68,7 @@
                     value="0" 
                     min="0" 
                     data-price="45.00" 
-                    onchange="adicionarAoCarrinho('Pizza', 39.90,'images/Cardapio/pizzacar.jpg', this.value)">
+                    onchange="adicionarAoCarrinho('Pomodoro', 18.00,'images/Cardapio/pomodoro.jpg', this.value)">
                 </div>
             </div>
 
@@ -110,17 +110,21 @@
                     value="0" 
                     min="0" 
                     data-price="24.90" 
-                    onchange="adicionarAoCarrinho('Panqueca', 24.90,'images/Cardapio/macaraocar.jpg', this.value)">
+                    onchange="adicionarAoCarrinho('Macarrão ao Molho', 24.90,'images/Cardapio/macaraocar.jpg', this.value)">
                 </div>
             </div>
+            <ul id="lista-Massa" class="list-group mt-3">
+                <!-- Massas do Firebase -->
+            </ul>
+        </div>
 
-        <!-- Categoria de Lanches -->
+        <!-- Categoria de Pizzas -->
 <div class="cardapio-category">
     <h3>Pizzas</h3>
 
     <!-- Pizza Calabresa -->
     <div class="card-item">
-        <img src="images/Carroselimg/sorvete3.jpg" alt="Hambúrguer Artesanal">
+        <img src="images/Cardapio/calabresa.jpg" alt="Hambúrguer Artesanal">
         <div class="content">
             <div class="card-title">Pizza de Calabresa</div>
             <div class="card-description">Pão macio com hambúrguer artesanal, queijo, alface, tomate e molho especial.</div>
@@ -135,13 +139,13 @@
                     value="0" 
                     min="0" 
                     data-price="25.50" 
-                    onchange="adicionarAoCarrinho('PizzaCa', 29.50,'images/Cardapio/macaraocar.jpg', this.value)">
+                    onchange="adicionarAoCarrinho('PizzaCa', 29.50,'images/Cardapio/calabresa.jpg', this.value)">
         </div>
     </div>
 
     <!-- Pizza de Frango -->
     <div class="card-item">
-        <img src="images/Carroselimg/sorvete3.jpg" alt="Sanduíche de Frango">
+        <img src="images/Cardapio/frango.jpg" alt="Sanduíche de Frango">
         <div class="content">
             <div class="card-title">Pizza de Frango</div>
             <div class="card-description">Sanduíche de frango grelhado com alface, tomate e molho de iogurte.</div>
@@ -156,15 +160,15 @@
             value="0" 
             min="0" 
             data-price="25.50" 
-            onchange="adicionarAoCarrinho('PizzaFra', 23.50,'images/Cardapio/macaraocar.jpg', this.value)">
+            onchange="adicionarAoCarrinho('PizzaFrango', 23.50,'images/Cardapio/frango.jpg', this.value)">
         </div>
     </div>
 
     <!-- Pizza de Frutos do Mar -->
     <div class="card-item">
-        <img src="images/Carroselimg/sorvete3.jpg" alt="Hot Dog">
+        <img src="images/Cardapio/frutos.jpg" alt="Hot Dog">
         <div class="content">
-            <div class="card-title">PIzza de Frutos do Mar</div>
+            <div class="card-title">Pizza de Frutos do Mar</div>
             <div class="card-description">Cachorro-quente com salsicha, molho de tomate, batata palha e milho.</div>
             <div class="card-price" id="price_hotdog">R$ 30,50</div>
         </div>
@@ -177,13 +181,13 @@
                     value="0" 
                     min="0" 
                     data-price="25.50" 
-                    onchange="adicionarAoCarrinho('Panqueca', 30.50,'images/Cardapio/macaraocar.jpg', this.value)">
+                    onchange="adicionarAoCarrinho('Frutos', 30.50,'images/Cardapio/frutos.jpg', this.value)">
         </div>
     </div>
 
     <!-- Pastel de Napolitana -->
     <div class="card-item">
-        <img src="images/Carroselimg/sorvete3.jpg" alt="Hot Dog">
+        <img src="images/Cardapio/napolitana.jpg" alt="Hot Dog">
         <div class="content">
             <div class="card-title">Pizza Napolitana</div>
             <div class="card-description">Pastel de Carne com muita ca</div>
@@ -198,13 +202,13 @@
             value="0" 
             min="0" 
             data-price="25.50" 
-            onchange="adicionarAoCarrinho('', 28.50,'images/Cardapio/macaraocar.jpg', this.value)">
+            onchange="adicionarAoCarrinho('Napolitana', 28.50,'images/Cardapio/napolitana.jpg', this.value)">
         </div>
     </div>
 
     <!-- Diavola -->
     <div class="card-item">
-        <img src="images/Carroselimg/sorvete3.jpg" alt="Coxinha">
+        <img src="images/Cardapio/diavola.jpg" alt="Coxinha">
         <div class="content">
             <div class="card-title">Pizza Diavola</div>
             <div class="card-description">Coxinha crocante com recheio de frango desfiado e temperado.</div>
@@ -219,9 +223,13 @@
             value="0" 
             min="0" 
             data-price="25.50" 
-            onchange="adicionarAoCarrinho('Diavola', 21.50,'images/Cardapio/macaraocar.jpg', this.value)">
+            onchange="adicionarAoCarrinho('Diavola', 21.50,'images/Cardapio/diavola.jpg', this.value)">
         </div>
     </div>
+
+    <ul id="lista-Pizzas" class="list-group mt-3">
+        <!-- Pizzas do Firebase -->
+    </ul>
 </div>
 
 
@@ -233,9 +241,9 @@
             <div class="card-item">
                 <img src="images/Carroselimg/sorvete3.jpg" alt="Pudim">
                 <div class="content">
-                    <div class="card-title">Pudim</div>
-                    <div class="card-description">Gelato</div>
-                    <div class="card-price" id="price_pudim">R$ 12,00</div>
+                    <div class="card-title">Gelato</div>
+                    <div class="card-description">Gelato muito bom</div>
+                    <div class="card-price" id="price_pudim">R$ 25,50</div>
                 </div>
                 <div>
                     <input 
@@ -246,48 +254,88 @@
             value="0" 
             min="0" 
             data-price="25.50" 
-            onchange="adicionarAoCarrinho('Gelato', 21.50,'images/Cardapio/macaraocar.jpg', this.value)">
+            onchange="adicionarAoCarrinho('Gelato', 25.50,'images/Carroselimg/sorvete3.jpg', this.value)">
                 </div>
             </div>
 
-            <!-- Torta de Limão -->
+            <!-- Crostata -->
             <div class="card-item">
-                <img src="images/Carroselimg/sorvete3.jpg" alt="Torta de Limão">
+                <img src="images/Cardapio/crostata.jpg" alt="Pudim">
                 <div class="content">
-                    <div class="card-title">Torta de chocolate</div>
-                    <div class="card-description">Torta cremosa com base crocante e recheio de chocolate.</div>
-                    <div class="card-price" id="price_torta">R$ 15,00</div>
+                    <div class="card-title">Crostata</div>
+                    <div class="card-description">Bom Crostata</div>
+                    <div class="card-price" id="price_pudim">R$ 25,00</div>
                 </div>
                 <div>
-                    <input type="number" name="quantidade_torta_limao" class="quantity-input" value="0" min="0"  data-price="15.00" onchange="AtualizarPreco()">
+                    <input 
+            type="number" 
+            id="quantidade_refrigerante" 
+            name="quantidade_refrigerante" 
+            class="quantity-input" 
+            value="0" 
+            min="0" 
+            data-price="25.50" 
+            onchange="adicionarAoCarrinho('Crostata', 25.00,'images/Cardapio/crostata.jpg', this.value)">
                 </div>
             </div>
+
+            <!-- Pudim -->
+            <div class="card-item">
+                <img src="images/Cardapio/pudin.jpg" alt="Torta de Limão">
+                <div class="content">
+                    <div class="card-title">Pudim</div>
+                    <div class="card-description">Pudim cremosa com base crocante e recheio de chocolate.</div>
+                    <div class="card-price" id="price_torta">R$ 20,00</div>
+                </div>
+                <div>
+                    <input 
+                    type="number" 
+                    id="quantidade_refrigerante" 
+                    name="quantidade_refrigerante" 
+                    class="quantity-input" 
+                    value="0" 
+                    min="0" 
+                    data-price="25.50" 
+                    onchange="adicionarAoCarrinho('Pudim', 20.00,'images/Cardapio/pudin.jpg', this.value)">
+                </div>
+            </div>
+            <ul id="lista-Sobremesas" class="list-group mt-3">
+                <!-- Sobremesas do Firebase -->
+            </ul>
         </div>
 
 <!-- Categoria de Bebidas -->
 <div class="cardapio-category">
     <h3>Bebidas</h3>
 
-    <!-- Suco Natural -->
+    <!-- Drink -->
     <div class="card-item">
-        <img src="images/Carroselimg/sorvete3.jpg" alt="Suco Natural">
+        <img src="images/Cardapio/drink.jpg" alt="Drink">
         <div class="content">
-            <div class="card-title">Suco Natural</div>
+            <div class="card-title">Drink</div>
             <div class="card-description">Escolha entre laranja, abacaxi ou maracujá. Natural e refrescante!</div>
-            <div class="card-price" id="price_suco">R$ 10,00</div>
+            <div class="card-price" id="price_suco">R$ 28,00</div>
         </div>
         <div>
-            <input type="number" name="quantidade_suco" class="quantity-input" value="0" min="0" data-price="10.00" onchange="AtualizarPreco()">
+            <input 
+                    type="number" 
+                    id="quantidade_refrigerante" 
+                    name="quantidade_refrigerante" 
+                    class="quantity-input" 
+                    value="0" 
+                    min="0" 
+                    data-price="25.50" 
+                    onchange="adicionarAoCarrinho('Drink', 28.00,'images/Cardapio/drink.jpg', this.value)">
         </div>
     </div>
 
     <!-- Refrigerante -->
     <div class="card-item">
-        <img src="images/Carroselimg/sorvete3.jpg" alt="Refrigerante" class="card-image">
+        <img src="images/Cardapio/coca.jpg" alt="Refrigerante" class="card-image">
         <div class="content">
             <div class="card-title">Refrigerante</div>
             <div class="card-description">Escolha entre Coca-Cola, Fanta ou Guaraná.</div>
-            <div class="card-price" id="price_refrigerante">R$ 8,00</div>
+            <div class="card-price" id="price_refrigerante">R$ 15,00</div>
         </div>
         <div class="quantity-container">
             <label for="quantidade_refrigerante">Quantidade:</label>
@@ -299,32 +347,74 @@
                 value="0" 
                 min="0" 
                 data-price="8.00" 
-                onchange="adicionarAoCarrinho('Refrigerante', 8.00,'images/Carroselimg/sorvete3.jpg', this.value)">
+                onchange="adicionarAoCarrinho('Refrigerante', 15.00,'images/Cardapio/coca.jpg', this.value)">
         </div>
     </div>
 
+    <!-- Creveja -->
     <div class="card-item">
-        <img src="images/Cardapio/lasanhacar.jpg" alt="Cerveja Artesanal">
+        <img src="images/Cardapio/cerveja.jpg" alt="Cerveja Artesanal">
         <div class="content">
             <div class="card-title">Cerveja Artesanal</div>
             <div class="card-description">Cerveja artesanal gelada, com diferentes sabores.</div>
-            <div class="card-price" id="price_cerveja">R$ 15,00</div>
+            <div class="card-price" id="price_cerveja">R$ 30,00</div>
         </div>
         <div>
-            <input type="number" name="quantidade_cerveja" class="quantity-input" value="0" min="0" id="feijoada" data-name="Lasanha" data-price="15.00" onchange="adicionarAoCarrinho('lasanha', 20.00,'images/Cardapio/lasanhacar.jpg', this.value)">
+            <input 
+            type="number" 
+            id="quantidade_refrigerante" 
+            name="quantidade_refrigerante" 
+            class="quantity-input" 
+            value="0" 
+            min="0" 
+            data-price="25.50" 
+            onchange="adicionarAoCarrinho('Cerveja', 30.00,'images/Cardapio/cerveja.jpg', this.value)">
         </div>
     </div>
-</div>
-    </form>
 
+     <!-- agua -->
+     <div class="card-item">
+        <img src="images/Cardapio/agua.jpg" alt="Agua" class="card-image">
+        <div class="content">
+            <div class="card-title">Água</div>
+            <div class="card-description">Escolha entre Coca-Cola, Fanta ou Guaraná.</div>
+            <div class="card-price" id="price_refrigerante">R$ 10,00</div>
+        </div>
+        <div class="quantity-container">
+            <label for="quantidade_refrigerante">Quantidade:</label>
+            <input 
+                type="number" 
+                id="quantidade_refrigerante" 
+                name="quantidade_refrigerante" 
+                class="quantity-input" 
+                value="0" 
+                min="0" 
+                data-price="8.00" 
+                onchange="adicionarAoCarrinho('Água', 10.00,'images/Cardapio/agua.jpg', this.value)">
+        </div>
+    </div>
+
+    
+        <ul id="lista-Bebidas" class="list-group mt-3">
+            <!-- Bebidas do Firebase -->
+        </ul>
+
+
+</div>
+
+   
+</form>
 </div>
 
 <!-- Footer -->
 <footer class="text-center mt-4 py-3">
 
      <p>Aguardamos sua visita!<br>
-       Rua Ipanema, 1243 - Rio de Janeiro<br>
+       Rua Flamengo, 100 - Feira de Santana<br>
        Telefone: (75) 99283-4894</p> 
+
+       
+        
 </footer>
 
 
@@ -335,6 +425,7 @@
         <h2>Carrinho de Compras</h2>
         <ul id="modal-carrinho-itens"></ul>
         <div id="modal-total" class="modal-total">Total: R$ 0,00</div>
+        <button id="finalizar-pedido" class="btn btn-primary">Finalizar Pedido</button>
     </div>
 </div>
 
@@ -344,8 +435,11 @@
 
 <script src="/javascripts/AtualizarPreco.js"></script>
 <script src="/javascripts/Carrinho.js"></script>
-
-
+<script src ="/javascripts/EnviarCarrinho.js" type ="module"></script>
+<script src ="javascripts/CarregarItens/Bebidas.js" type="module"></script>
+<script src ="javascripts/CarregarItens/Sobremesas.js" type="module"></script>
+<script src ="javascripts/CarregarItens/Pizza.js" type="module"></script>
+<script src ="javascripts/CarregarItens/Massa.js" type="module"></script>
 
 </body>
 </html>

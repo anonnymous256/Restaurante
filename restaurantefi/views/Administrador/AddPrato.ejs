@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adionar Prato</title>
+  <link rel="stylesheet" href="/stylesheets/AddPrato.css">
+</head>
+
+<body>
+
+  <div class="top-bar">
+    <button class="back-button" onclick="window.location.href = '/Dashboard'">←</button>
+  </div>
+
+  <h1>ADICIONAR PRATO</h1>
+
+  <form id="crudForm">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" required>
+
+    <label for="descricao">Descrição:</label>
+    <input type="text" id="descricao" required>
+
+    <label for="imagem">URL da Imagem:</label>
+    <input type="text" id="imagem" required>
+
+    <label for="preco">Preço:</label>
+    <input type="number" id="preco" step="0.01" required>
+
+    <label for="categoria">Categoria:</label>
+    <select id="categoria" required>
+      <option value="">Selecione...</option>
+      <option value="Massa">Massa</option>
+      <option value="Pizza">Pizza</option>
+      <option value="Sobremesa">Sobremesa</option>
+      <option value="Bebidas">Bebidas</option>
+    </select>
+
+    <button type="submit" class="Enviar">Adicionar Item</button>
+  </form>
+
+  <script type="module" src="/javascripts/firebase.js"></script>
+
+</body>
+
+</html>

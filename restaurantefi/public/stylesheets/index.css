@@ -37,6 +37,25 @@ header h5 {
     font-size: 1.5rem;       
 }
 
+.whatssap {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #25D366; 
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.whatssap:hover {
+    background-color: #128C7E; 
+}
+
 .organizar-botoes {
     display: flex;                  
     gap: 10px;                      

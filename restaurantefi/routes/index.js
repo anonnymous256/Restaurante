@@ -14,4 +14,16 @@ router.get('/Carrinho', function(req, res) {
   res.render('Restaurante/Carrinho');
 });
 
+router.get('/Dashboard', function(req, res) {
+  res.render('Administrador/Dashboard');
+});
+
+router.get('/Criar', function(req, res) {
+  res.render('Administrador/AddPrato');
+});
+
+router.get('/vizualizar', function(req, res) {
+  res.render('Administrador/VizualizarPratos');
+});
+
 module.exports = router;

@@ -1,6 +1,6 @@
 /* Estilo do modal */
 .modal {
-    display: none; /* Esconde o modal por padrão */
+    display: none; 
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -13,7 +13,7 @@
 
 /* Conteúdo do modal */
 .modal-content {
-    background-color: #1060bb;
+    background-color: gray;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -43,17 +43,52 @@
     text-align: right;
 }
 
-#abrir-modal {
-    position: fixed;
-    left: 20px; 
-    bottom: 20px; 
-    font-size: 30px; 
-    background-color: transparent;
+#finalizar-pedido {
+    background-color: #df0b0b;
+    color: #fff;
     border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
     cursor: pointer;
-    color: #000; 
+    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
+#finalizar-pedido:hover {
+    background-color: #500202;
+}
+
+
+#abrir-modal {
+    position: fixed;         
+    left: 20px;               
+    bottom: 20px;             
+    font-size: 30px;          
+    background-color: #fff;   
+    border: 2px solid #df0b0b;
+    border-radius: 50%;      
+    padding: 15px;            
+    cursor: pointer;        
+    color: #df0b0b;          
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; 
+    z-index: 1000;            
+}
+
+
 #abrir-modal:hover {
-    color: #007bff;
+    background-color: #df0b0b; 
+    color: #fff;               
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.1);       
+}
+
+#abrir-modal:active {
+    transform: scale(1);       
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+#abrir-modal:focus {
+    outline: none;              
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
 }
