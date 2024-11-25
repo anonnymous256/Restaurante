@@ -1,445 +1,530 @@
 <!DOCTYPE html>
 <html lang="pt-BR" data-bs-theme="auto">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cantinho do Sabor - Cardápio</title>
-    <link rel = "stylesheet" href ="stylesheets/cardapio.css">
-    <link rel = "stylesheet" href ="stylesheets/carrinho.css">
-    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
-<body>
-<header>
-    <a href = "/">
-    <img src="images/logo.png" alt="Logo do Restaurante">
-    </a>
-        <h1>Restaurante dos Granolas</h1>
-        <h5>Delicias Refinadas</h5>     
-</header>
+    <link rel="stylesheet" href="stylesheets/cardapio.css" />
+    <link rel="stylesheet" href="stylesheets/carrinho.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="/">
+        <img src="images/logo.png" alt="Logo do Restaurante" />
+      </a>
+      <h1>Restaurante dos Granolas</h1>
+      <h5>Delicias Refinadas</h5>
+    </header>
 
+    <!-- Cardápio -->
+    <div class="container cardapio-section">
+      <h2
+        class="text-center mb-5"
+        style="font-size: 2.5rem; color: #8b0000; text-align: center"
+      >
+        Nosso Cardápio
+      </h2>
 
-<!-- Cardápio -->
-<div class="container cardapio-section">
-    <h2 class="text-center mb-5" style="font-size: 2.5rem; color: #8b0000; text-align: center">Nosso Cardápio</h2>
-
-    <!-- Formulário de Pedido -->
-    <form action="/finalizar_pedido" method="POST">
-        
+      <!-- Formulário de Pedido -->
+      <form action="/finalizar_pedido" method="POST">
         <!-- Categoria de Pratos Principais -->
         <div class="cardapio-category">
-            <h3>Massas</h3>
-            <!-- Lasanha -->
-            <div class="card-item">
-                <img src="images/Cardapio/lasanhacar.jpg" alt="Feijoada">
-                <div class="content">
-                    <div class="card-title">Lasanha</div>
-                    <div class="card-description"> 
-                        Lasanha com camadas de massa, molho à bolonhesa ou frango, queijo derretido e molho bechamel. Assada até dourar, é uma refeição rica e reconfortante.</div>
-                    <div class="card-price" id="price_feijoada">R$ 45,00</div>
-                </div>
-                <div>
-                    <input 
-                    type="number" 
-                    id="quantidade_refrigerante" 
-                    name="quantidade_refrigerante" 
-                    class="quantity-input" 
-                    value="0" 
-                    min="0" 
-                    data-price="45.00" 
-                    onchange="adicionarAoCarrinho('Lasanha', 45.00,'images/Cardapio/lasanhacar.jpg', this.value)">
-                </div>
+          <h3>Massas</h3>
+          <!-- Lasanha -->
+          <div class="card-item">
+            <img src="images/Cardapio/lasanhacar.jpg" alt="Feijoada" />
+            <div class="content">
+              <div class="card-title">Lasanha</div>
+              <div class="card-description">
+                Lasanha com camadas de massa, molho à bolonhesa ou frango,
+                queijo derretido e molho bechamel. Assada até dourar, é uma
+                refeição rica e reconfortante.
+              </div>
+              <div class="card-price" id="price_feijoada">R$ 45,00</div>
             </div>
+            <div>
+              <input
+                type="number"
+                id="quantidade_refrigerante"
+                name="quantidade_refrigerante"
+                class="quantity-input"
+                value="0"
+                min="0"
+                data-price="45.00"
+                onchange="adicionarAoCarrinho('Lasanha', 45.00,'images/Cardapio/lasanhacar.jpg', this.value)"
+              />
+            </div>
+          </div>
 
-            <!-- Pomodoro -->
-            <div class="card-item">
-                <img src="images/Cardapio/pomodoro.jpg" alt="Bife Acebolado">
-                <div class="content">
-                    <div class="card-title">Pomodoro</div>
-                    <div class="card-description">Pizza com massa fina,queijo e ingredientes frescos como carnes e vegetais. Assada até crocante.</div>
-                    <div class="card-price" id="price_bife">R$ 18,00</div>
-                </div>
-                <div>
-                    <input 
-                    type="number" 
-                    id="quantidade_refrigerante" 
-                    name="quantidade_refrigerante" 
-                    class="quantity-input" 
-                    value="0" 
-                    min="0" 
-                    data-price="45.00" 
-                    onchange="adicionarAoCarrinho('Pomodoro', 18.00,'images/Cardapio/pomodoro.jpg', this.value)">
-                </div>
+          <!-- Pomodoro -->
+          <div class="card-item">
+            <img src="images/Cardapio/pomodoro.jpg" alt="Bife Acebolado" />
+            <div class="content">
+              <div class="card-title">Pomodoro</div>
+              <div class="card-description">
+                Massa fresca acompanhada de um molho clássico de tomate, alho e
+                manjericão, finalizada com um toque de azeite de oliva.
+              </div>
+              <div class="card-price" id="price_bife">R$ 18,00</div>
             </div>
+            <div>
+              <input
+                type="number"
+                id="quantidade_refrigerante"
+                name="quantidade_refrigerante"
+                class="quantity-input"
+                value="0"
+                min="0"
+                data-price="45.00"
+                onchange="adicionarAoCarrinho('Pomodoro', 18.00,'images/Cardapio/pomodoro.jpg', this.value)"
+              />
+            </div>
+          </div>
 
-            <!-- Panqueca -->
-            <div class="card-item">
-                <img src="images/Cardapio/panquecacar.jpg" alt="Moqueca de Peixe">
-                <div class="content">
-                    <div class="card-title">Panqueca</div>
-                    <div class="card-description">Panqueca macia e leve, recheada com opções como carne moída, frango ou queijo, coberta com molho cremoso e queimada levemente. Uma escolha deliciosa e reconfortante para qualquer refeição.</div>
-                    <div class="card-price" id="price_moqueca">R$ 59,90</div>
-                </div>
-                <div>
-                    <input 
-                    type="number" 
-                    id="quantidade_refrigerante" 
-                    name="quantidade_refrigerante" 
-                    class="quantity-input" 
-                    value="0" 
-                    min="0" 
-                    data-price="59.90" 
-                    onchange="adicionarAoCarrinho('Panqueca', 59.90,'images/Cardapio/panquecacar.jpg', this.value)">
-                </div>
+          <!-- Panqueca -->
+          <div class="card-item">
+            <img src="images/Cardapio/panquecacar.jpg" alt="Moqueca de Peixe" />
+            <div class="content">
+              <div class="card-title">Panqueca</div>
+              <div class="card-description">
+                Massa macia e delicada, recheada com opções a gosto e coberta
+                com molho cremoso. Uma deliciosa combinação de sabor e
+                aconchego.
+              </div>
+              <div class="card-price" id="price_moqueca">R$ 59,90</div>
             </div>
+            <div>
+              <input
+                type="number"
+                id="quantidade_refrigerante"
+                name="quantidade_refrigerante"
+                class="quantity-input"
+                value="0"
+                min="0"
+                data-price="59.90"
+                onchange="adicionarAoCarrinho('Panqueca', 59.90,'images/Cardapio/panquecacar.jpg', this.value)"
+              />
+            </div>
+          </div>
 
-            <!-- Macarrão -->
-            <div class="card-item">
-                <img src="images/Cardapio/macaraocar.jpg" alt="Moqueca de Peixe">
-                <div class="content">
-                    <div class="card-title">Macarrão ao molho branco</div>
-                    <div class="card-description">Pizza com massa fina ou grossa, molho de tomate, queijo e ingredientes frescos como carnes e vegetais.</div>
-                    <div class="card-price" id="price_moqueca">R$ 24,90</div>
-                </div>
-                <div>
-                    <input 
-                    type="number" 
-                    id="quantidade_refrigerante" 
-                    name="quantidade_refrigerante" 
-                    class="quantity-input" 
-                    value="0" 
-                    min="0" 
-                    data-price="24.90" 
-                    onchange="adicionarAoCarrinho('Macarrão ao Molho', 24.90,'images/Cardapio/macaraocar.jpg', this.value)">
-                </div>
+          <!-- Macarrão -->
+          <div class="card-item">
+            <img src="images/Cardapio/macaraocar.jpg" alt="Moqueca de Peixe" />
+            <div class="content">
+              <div class="card-title">Macarrão ao molho branco</div>
+              <div class="card-description">
+                Massa fresca envolvida em um molho cremoso à base de leite,
+                queijo e um toque de noz-moscada. Uma combinação irresistível de
+                sabor e suavidade.
+              </div>
+              <div class="card-price" id="price_moqueca">R$ 24,90</div>
             </div>
-            <ul id="lista-Massa" class="list-group mt-3">
-                <!-- Massas do Firebase -->
-            </ul>
+            <div>
+              <input
+                type="number"
+                id="quantidade_refrigerante"
+                name="quantidade_refrigerante"
+                class="quantity-input"
+                value="0"
+                min="0"
+                data-price="24.90"
+                onchange="adicionarAoCarrinho('Macarrão ao Molho', 24.90,'images/Cardapio/macaraocar.jpg', this.value)"
+              />
+            </div>
+          </div>
+          <ul id="lista-Massa" class="list-group mt-3">
+            <!-- Massas do Firebase -->
+          </ul>
         </div>
 
         <!-- Categoria de Pizzas -->
-<div class="cardapio-category">
-    <h3>Pizzas</h3>
+        <div class="cardapio-category">
+          <h3>Pizzas</h3>
 
-    <!-- Pizza Calabresa -->
-    <div class="card-item">
-        <img src="images/Cardapio/calabresa.jpg" alt="Hambúrguer Artesanal">
-        <div class="content">
-            <div class="card-title">Pizza de Calabresa</div>
-            <div class="card-description">Pão macio com hambúrguer artesanal, queijo, alface, tomate e molho especial.</div>
-            <div class="card-price" id="price_hamburguer_artesanal">R$ 29,50</div>
-        </div>
-        <div>
-            <input 
-                    type="number" 
-                    id="quantidade_refrigerante" 
-                    name="quantidade_refrigerante" 
-                    class="quantity-input" 
-                    value="0" 
-                    min="0" 
-                    data-price="25.50" 
-                    onchange="adicionarAoCarrinho('PizzaCa', 29.50,'images/Cardapio/calabresa.jpg', this.value)">
-        </div>
-    </div>
+          <!-- Pizza Calabresa -->
+          <div class="card-item">
+            <img
+              src="images/Cardapio/calabresa.jpg"
+              alt="Hambúrguer Artesanal"
+            />
+            <div class="content">
+              <div class="card-title">Pizza de Calabresa</div>
+              <div class="card-description">
+                Massa crocante coberta com molho de tomate, queijo muçarela,
+                rodelas de calabresa e cebola, finalizada com orégano.
+              </div>
+              <div class="card-price" id="price_hamburguer_artesanal">
+                R$ 29,50
+              </div>
+            </div>
+            <div>
+              <input
+                type="number"
+                id="quantidade_refrigerante"
+                name="quantidade_refrigerante"
+                class="quantity-input"
+                value="0"
+                min="0"
+                data-price="25.50"
+                onchange="adicionarAoCarrinho('PizzaCa', 29.50,'images/Cardapio/calabresa.jpg', this.value)"
+              />
+            </div>
+          </div>
 
-    <!-- Pizza de Frango -->
-    <div class="card-item">
-        <img src="images/Cardapio/frango.jpg" alt="Sanduíche de Frango">
-        <div class="content">
-            <div class="card-title">Pizza de Frango</div>
-            <div class="card-description">Sanduíche de frango grelhado com alface, tomate e molho de iogurte.</div>
-            <div class="card-price" id ="price_sanduiche_frango">R$ 23,50</div>
-        </div>
-        <div>
-            <input 
-            type="number" 
-            id="quantidade_refrigerante" 
-            name="quantidade_refrigerante" 
-            class="quantity-input" 
-            value="0" 
-            min="0" 
-            data-price="25.50" 
-            onchange="adicionarAoCarrinho('PizzaFrango', 23.50,'images/Cardapio/frango.jpg', this.value)">
-        </div>
-    </div>
+          <!-- Pizza de Frango -->
+          <div class="card-item">
+            <img src="images/Cardapio/frango.jpg" alt="Sanduíche de Frango" />
+            <div class="content">
+              <div class="card-title">Pizza de Frango</div>
+              <div class="card-description">
+                Massa crocante com molho de tomate, queijo muçarela, frango
+                desfiado, cebola e azeitonas, finalizada com orégano.
+              </div>
+              <div class="card-price" id="price_sanduiche_frango">R$ 23,50</div>
+            </div>
+            <div>
+              <input
+                type="number"
+                id="quantidade_refrigerante"
+                name="quantidade_refrigerante"
+                class="quantity-input"
+                value="0"
+                min="0"
+                data-price="25.50"
+                onchange="adicionarAoCarrinho('PizzaFrango', 23.50,'images/Cardapio/frango.jpg', this.value)"
+              />
+            </div>
+          </div>
 
-    <!-- Pizza de Frutos do Mar -->
-    <div class="card-item">
-        <img src="images/Cardapio/frutos.jpg" alt="Hot Dog">
-        <div class="content">
-            <div class="card-title">Pizza de Frutos do Mar</div>
-            <div class="card-description">Cachorro-quente com salsicha, molho de tomate, batata palha e milho.</div>
-            <div class="card-price" id="price_hotdog">R$ 30,50</div>
-        </div>
-        <div>
-            <input 
-                    type="number" 
-                    id="quantidade_refrigerante" 
-                    name="quantidade_refrigerante" 
-                    class="quantity-input" 
-                    value="0" 
-                    min="0" 
-                    data-price="25.50" 
-                    onchange="adicionarAoCarrinho('Frutos', 30.50,'images/Cardapio/frutos.jpg', this.value)">
-        </div>
-    </div>
+          <!-- Pizza de Frutos do Mar -->
+          <div class="card-item">
+            <img src="images/Cardapio/frutos.jpg" alt="Hot Dog" />
+            <div class="content">
+              <div class="card-title">Pizza de Frutos do Mar</div>
+              <div class="card-description">
+                Massa crocante coberta com molho de tomate, queijo muçarela e
+                uma seleção de frutos do mar frescos, como camarões, lulas e
+                mexilhões.
+              </div>
+              <div class="card-price" id="price_hotdog">R$ 30,50</div>
+            </div>
+            <div>
+              <input
+                type="number"
+                id="quantidade_refrigerante"
+                name="quantidade_refrigerante"
+                class="quantity-input"
+                value="0"
+                min="0"
+                data-price="25.50"
+                onchange="adicionarAoCarrinho('Frutos', 30.50,'images/Cardapio/frutos.jpg', this.value)"
+              />
+            </div>
+          </div>
 
-    <!-- Pastel de Napolitana -->
-    <div class="card-item">
-        <img src="images/Cardapio/napolitana.jpg" alt="Hot Dog">
-        <div class="content">
-            <div class="card-title">Pizza Napolitana</div>
-            <div class="card-description">Pastel de Carne com muita ca</div>
-            <div class="card-price" id="price_hotdog">R$ 28,50</div>
-        </div>
-        <div>
-            <input 
-            type="number" 
-            id="quantidade_refrigerante" 
-            name="quantidade_refrigerante" 
-            class="quantity-input" 
-            value="0" 
-            min="0" 
-            data-price="25.50" 
-            onchange="adicionarAoCarrinho('Napolitana', 28.50,'images/Cardapio/napolitana.jpg', this.value)">
-        </div>
-    </div>
+          <!-- Pastel de Napolitana -->
+          <div class="card-item">
+            <img src="images/Cardapio/napolitana.jpg" alt="Hot Dog" />
+            <div class="content">
+              <div class="card-title">Pizza Napolitana</div>
+              <div class="card-description">
+                Massa fina e crocante com molho de tomate, queijo muçarela,
+                tomates frescos, manjericão e um toque de azeite de oliva.
+              </div>
+              <div class="card-price" id="price_hotdog">R$ 28,50</div>
+            </div>
+            <div>
+              <input
+                type="number"
+                id="quantidade_refrigerante"
+                name="quantidade_refrigerante"
+                class="quantity-input"
+                value="0"
+                min="0"
+                data-price="25.50"
+                onchange="adicionarAoCarrinho('Napolitana', 28.50,'images/Cardapio/napolitana.jpg', this.value)"
+              />
+            </div>
+          </div>
 
-    <!-- Diavola -->
-    <div class="card-item">
-        <img src="images/Cardapio/diavola.jpg" alt="Coxinha">
-        <div class="content">
-            <div class="card-title">Pizza Diavola</div>
-            <div class="card-description">Coxinha crocante com recheio de frango desfiado e temperado.</div>
-            <div class="card-price" id="price_coxinha">R$ 21,50</div>
-        </div>
-        <div>
-            <input 
-            type="number" 
-            id="quantidade_refrigerante" 
-            name="quantidade_refrigerante" 
-            class="quantity-input" 
-            value="0" 
-            min="0" 
-            data-price="25.50" 
-            onchange="adicionarAoCarrinho('Diavola', 21.50,'images/Cardapio/diavola.jpg', this.value)">
-        </div>
-    </div>
+          <!-- Diavola -->
+          <div class="card-item">
+            <img src="images/Cardapio/diavola.jpg" alt="Coxinha" />
+            <div class="content">
+              <div class="card-title">Pizza Diavola</div>
+              <div class="card-description">
+                Massa crocante com molho de tomate, queijo muçarela, fatias de
+                calabresa picante, pimentões e um toque de orégano.
+              </div>
+              <div class="card-price" id="price_coxinha">R$ 21,50</div>
+            </div>
+            <div>
+              <input
+                type="number"
+                id="quantidade_refrigerante"
+                name="quantidade_refrigerante"
+                class="quantity-input"
+                value="0"
+                min="0"
+                data-price="25.50"
+                onchange="adicionarAoCarrinho('Diavola', 21.50,'images/Cardapio/diavola.jpg', this.value)"
+              />
+            </div>
+          </div>
 
-    <ul id="lista-Pizzas" class="list-group mt-3">
-        <!-- Pizzas do Firebase -->
-    </ul>
-</div>
-
+          <ul id="lista-Pizzas" class="list-group mt-3">
+            <!-- Pizzas do Firebase -->
+          </ul>
+        </div>
 
         <!-- Categoria de Sobremesas -->
         <div class="cardapio-category">
-            <h3>Sobremesas</h3>
+          <h3>Sobremesas</h3>
 
-            <!-- Gelato -->
-            <div class="card-item">
-                <img src="images/Carroselimg/sorvete3.jpg" alt="Pudim">
-                <div class="content">
-                    <div class="card-title">Gelato</div>
-                    <div class="card-description">Gelato muito bom</div>
-                    <div class="card-price" id="price_pudim">R$ 25,50</div>
-                </div>
-                <div>
-                    <input 
-            type="number" 
-            id="quantidade_refrigerante" 
-            name="quantidade_refrigerante" 
-            class="quantity-input" 
-            value="0" 
-            min="0" 
-            data-price="25.50" 
-            onchange="adicionarAoCarrinho('Gelato', 25.50,'images/Carroselimg/sorvete3.jpg', this.value)">
-                </div>
+          <!-- Gelato -->
+          <div class="card-item">
+            <img src="images/Carroselimg/tortinha.jpeg" alt="Pudim" />
+            <div class="content">
+              <div class="card-title">Tortinha</div>
+              <div class="card-description">
+                Deliciosa base crocante recheada com creme suave e coberta com
+                morangos frescos. Uma sobremesa leve e irresistível, perfeita
+                para qualquer ocasião.
+              </div>
+              <div class="card-price" id="price_pudim">R$ 25,50</div>
             </div>
-
-            <!-- Crostata -->
-            <div class="card-item">
-                <img src="images/Cardapio/crostata.jpg" alt="Pudim">
-                <div class="content">
-                    <div class="card-title">Crostata</div>
-                    <div class="card-description">Bom Crostata</div>
-                    <div class="card-price" id="price_pudim">R$ 25,00</div>
-                </div>
-                <div>
-                    <input 
-            type="number" 
-            id="quantidade_refrigerante" 
-            name="quantidade_refrigerante" 
-            class="quantity-input" 
-            value="0" 
-            min="0" 
-            data-price="25.50" 
-            onchange="adicionarAoCarrinho('Crostata', 25.00,'images/Cardapio/crostata.jpg', this.value)">
-                </div>
+            <div>
+              <input
+                type="number"
+                id="quantidade_refrigerante"
+                name="quantidade_refrigerante"
+                class="quantity-input"
+                value="0"
+                min="0"
+                data-price="25.50"
+                onchange="adicionarAoCarrinho('Tortinha', 25.50,'images/Carroselimg/tortinha.jpeg', this.value)"
+              />
             </div>
+          </div>
 
-            <!-- Pudim -->
-            <div class="card-item">
-                <img src="images/Cardapio/pudin.jpg" alt="Torta de Limão">
-                <div class="content">
-                    <div class="card-title">Pudim</div>
-                    <div class="card-description">Pudim cremosa com base crocante e recheio de chocolate.</div>
-                    <div class="card-price" id="price_torta">R$ 20,00</div>
-                </div>
-                <div>
-                    <input 
-                    type="number" 
-                    id="quantidade_refrigerante" 
-                    name="quantidade_refrigerante" 
-                    class="quantity-input" 
-                    value="0" 
-                    min="0" 
-                    data-price="25.50" 
-                    onchange="adicionarAoCarrinho('Pudim', 20.00,'images/Cardapio/pudin.jpg', this.value)">
-                </div>
+          <!-- Crostata -->
+          <div class="card-item">
+            <img src="images/Cardapio/crostata.jpg" alt="Pudim" />
+            <div class="content">
+              <div class="card-title">Crostata</div>
+              <div class="card-description">
+                Uma saborosa torta italiana com massa crocante, recheada com
+                geleia de frutas e finalizada com uma delicada camada de massa
+                trançada.
+              </div>
+              <div class="card-price" id="price_pudim">R$ 25,00</div>
             </div>
-            <ul id="lista-Sobremesas" class="list-group mt-3">
-                <!-- Sobremesas do Firebase -->
-            </ul>
+            <div>
+              <input
+                type="number"
+                id="quantidade_refrigerante"
+                name="quantidade_refrigerante"
+                class="quantity-input"
+                value="0"
+                min="0"
+                data-price="25.50"
+                onchange="adicionarAoCarrinho('Crostata', 25.00,'images/Cardapio/crostata.jpg', this.value)"
+              />
+            </div>
+          </div>
+
+          <!-- Pudim -->
+          <div class="card-item">
+            <img src="images/Cardapio/pudin.jpg" alt="Torta de Limão" />
+            <div class="content">
+              <div class="card-title">Pudim</div>
+              <div class="card-description">
+                Sobremesa cremosa e aveludada, com caramelo suave e sabor
+                irresistível. Um clássico que derrete na boca e conquista a
+                todos.
+              </div>
+              <div class="card-price" id="price_torta">R$ 20,00</div>
+            </div>
+            <div>
+              <input
+                type="number"
+                id="quantidade_refrigerante"
+                name="quantidade_refrigerante"
+                class="quantity-input"
+                value="0"
+                min="0"
+                data-price="25.50"
+                onchange="adicionarAoCarrinho('Pudim', 20.00,'images/Cardapio/pudin.jpg', this.value)"
+              />
+            </div>
+          </div>
+          <ul id="lista-Sobremesas" class="list-group mt-3">
+            <!-- Sobremesas do Firebase -->
+          </ul>
         </div>
 
-<!-- Categoria de Bebidas -->
-<div class="cardapio-category">
-    <h3>Bebidas</h3>
+        <!-- Categoria de Bebidas -->
+        <div class="cardapio-category">
+          <h3>Bebidas</h3>
 
-    <!-- Drink -->
-    <div class="card-item">
-        <img src="images/Cardapio/drink.jpg" alt="Drink">
-        <div class="content">
-            <div class="card-title">Drink</div>
-            <div class="card-description">Escolha entre laranja, abacaxi ou maracujá. Natural e refrescante!</div>
-            <div class="card-price" id="price_suco">R$ 28,00</div>
-        </div>
-        <div>
-            <input 
-                    type="number" 
-                    id="quantidade_refrigerante" 
-                    name="quantidade_refrigerante" 
-                    class="quantity-input" 
-                    value="0" 
-                    min="0" 
-                    data-price="25.50" 
-                    onchange="adicionarAoCarrinho('Drink', 28.00,'images/Cardapio/drink.jpg', this.value)">
-        </div>
-    </div>
+          <!-- Drink -->
+          <div class="card-item">
+            <img src="images/Cardapio/drink.jpg" alt="Drink" />
+            <div class="content">
+              <div class="card-title">Drink</div>
+              <div class="card-description">
+                Refrescante mistura de morangos frescos, gelo e um toque de
+                limão, servidos em uma bebida doce e deliciosa. Perfeito para
+                momentos de descontração e sabor.
+              </div>
+              <div class="card-price" id="price_suco">R$ 28,00</div>
+            </div>
+            <div>
+              <input
+                type="number"
+                id="quantidade_refrigerante"
+                name="quantidade_refrigerante"
+                class="quantity-input"
+                value="0"
+                min="0"
+                data-price="25.50"
+                onchange="adicionarAoCarrinho('Drink', 28.00,'images/Cardapio/drink.jpg', this.value)"
+              />
+            </div>
+          </div>
 
-    <!-- Refrigerante -->
-    <div class="card-item">
-        <img src="images/Cardapio/coca.jpg" alt="Refrigerante" class="card-image">
-        <div class="content">
-            <div class="card-title">Refrigerante</div>
-            <div class="card-description">Escolha entre Coca-Cola, Fanta ou Guaraná.</div>
-            <div class="card-price" id="price_refrigerante">R$ 15,00</div>
-        </div>
-        <div class="quantity-container">
-            <label for="quantidade_refrigerante">Quantidade:</label>
-            <input 
-                type="number" 
-                id="quantidade_refrigerante" 
-                name="quantidade_refrigerante" 
-                class="quantity-input" 
-                value="0" 
-                min="0" 
-                data-price="8.00" 
-                onchange="adicionarAoCarrinho('Refrigerante', 15.00,'images/Cardapio/coca.jpg', this.value)">
-        </div>
-    </div>
+          <!-- Refrigerante -->
+          <div class="card-item">
+            <img
+              src="images/Cardapio/coca.jpg"
+              alt="Refrigerante"
+              class="card-image"
+            />
+            <div class="content">
+              <div class="card-title">Refrigerante</div>
+              <div class="card-description">
+                Variedade de sabores refrescantes para todos os gostos. Escolha
+                entre cola, guaraná, laranja e outros, para acompanhar sua
+                refeição com frescor e sabor.
+              </div>
+              <div class="card-price" id="price_refrigerante">R$ 15,00</div>
+            </div>
+            <div class="quantity-container">
+              <label for="quantidade_refrigerante">Quantidade:</label>
+              <input
+                type="number"
+                id="quantidade_refrigerante"
+                name="quantidade_refrigerante"
+                class="quantity-input"
+                value="0"
+                min="0"
+                data-price="8.00"
+                onchange="adicionarAoCarrinho('Refrigerante', 15.00,'images/Cardapio/coca.jpg', this.value)"
+              />
+            </div>
+          </div>
 
-    <!-- Creveja -->
-    <div class="card-item">
-        <img src="images/Cardapio/cerveja.jpg" alt="Cerveja Artesanal">
-        <div class="content">
-            <div class="card-title">Cerveja Artesanal</div>
-            <div class="card-description">Cerveja artesanal gelada, com diferentes sabores.</div>
-            <div class="card-price" id="price_cerveja">R$ 30,00</div>
-        </div>
-        <div>
-            <input 
-            type="number" 
-            id="quantidade_refrigerante" 
-            name="quantidade_refrigerante" 
-            class="quantity-input" 
-            value="0" 
-            min="0" 
-            data-price="25.50" 
-            onchange="adicionarAoCarrinho('Cerveja', 30.00,'images/Cardapio/cerveja.jpg', this.value)">
-        </div>
-    </div>
+          <!-- Creveja -->
+          <div class="card-item">
+            <img src="images/Cardapio/cerveja.jpg" alt="Cerveja Artesanal" />
+            <div class="content">
+              <div class="card-title">Cerveja Artesanal</div>
+              <div class="card-description">
+                Seleção de cervejas geladas, com opções de diferentes estilos e
+                sabores, perfeitas para acompanhar sua refeição ou para relaxar
+                com os amigos.
+              </div>
+              <div class="card-price" id="price_cerveja">R$ 30,00</div>
+            </div>
+            <div>
+              <input
+                type="number"
+                id="quantidade_refrigerante"
+                name="quantidade_refrigerante"
+                class="quantity-input"
+                value="0"
+                min="0"
+                data-price="25.50"
+                onchange="adicionarAoCarrinho('Cerveja', 30.00,'images/Cardapio/cerveja.jpg', this.value)"
+              />
+            </div>
+          </div>
 
-     <!-- agua -->
-     <div class="card-item">
-        <img src="images/Cardapio/agua.jpg" alt="Agua" class="card-image">
-        <div class="content">
-            <div class="card-title">Água</div>
-            <div class="card-description">Escolha entre Coca-Cola, Fanta ou Guaraná.</div>
-            <div class="card-price" id="price_refrigerante">R$ 10,00</div>
-        </div>
-        <div class="quantity-container">
-            <label for="quantidade_refrigerante">Quantidade:</label>
-            <input 
-                type="number" 
-                id="quantidade_refrigerante" 
-                name="quantidade_refrigerante" 
-                class="quantity-input" 
-                value="0" 
-                min="0" 
-                data-price="8.00" 
-                onchange="adicionarAoCarrinho('Água', 10.00,'images/Cardapio/agua.jpg', this.value)">
-        </div>
-    </div>
+          <!-- agua -->
+          <div class="card-item">
+            <img src="images/Cardapio/agua.jpg" alt="Agua" class="card-image" />
+            <div class="content">
+              <div class="card-title">Água</div>
+              <div class="card-description">
+                Refrescante e pura, disponível em garrafinha ou com gás, a
+                escolha perfeita para acompanhar sua refeição com leveza e
+                hidratação
+              </div>
+              <div class="card-price" id="price_refrigerante">R$ 10,00</div>
+            </div>
+            <div class="quantity-container">
+              <label for="quantidade_refrigerante">Quantidade:</label>
+              <input
+                type="number"
+                id="quantidade_refrigerante"
+                name="quantidade_refrigerante"
+                class="quantity-input"
+                value="0"
+                min="0"
+                data-price="8.00"
+                onchange="adicionarAoCarrinho('Água', 10.00,'images/Cardapio/agua.jpg', this.value)"
+              />
+            </div>
+          </div>
 
-    
-        <ul id="lista-Bebidas" class="list-group mt-3">
+          <ul id="lista-Bebidas" class="list-group mt-3">
             <!-- Bebidas do Firebase -->
-        </ul>
+          </ul>
+        </div>
+      </form>
+    </div>
 
+    <!-- Footer -->
+    <footer class="text-center mt-4 py-3">
+      <p>
+        Aguardamos sua visita!<br />
+        Rua Flamengo, 100 - Feira de Santana<br />
+        Telefone: (75) 99283-4894
+      </p>
+    </footer>
 
-</div>
-
-   
-</form>
-</div>
-
-<!-- Footer -->
-<footer class="text-center mt-4 py-3">
-
-     <p>Aguardamos sua visita!<br>
-       Rua Flamengo, 100 - Feira de Santana<br>
-       Telefone: (75) 99283-4894</p> 
-
-       
-        
-</footer>
-
-
-
-<div id="carrinho-modal" class="modal">
-    <div class="modal-content">
+    <div id="carrinho-modal" class="modal">
+      <div class="modal-content">
         <span class="fechar">&times;</span>
         <h2>Carrinho de Compras</h2>
         <ul id="modal-carrinho-itens"></ul>
         <div id="modal-total" class="modal-total">Total: R$ 0,00</div>
-        <button id="finalizar-pedido" class="btn btn-primary">Finalizar Pedido</button>
+        <button id="finalizar-pedido" class="btn btn-primary">
+          Finalizar Pedido
+        </button>
+      </div>
     </div>
-</div>
 
-<!-- Ícone do carrinho -->
-<i id="abrir-modal" class="fas fa-shopping-cart"></i>
+    <!-- Ícone do carrinho -->
+    <i id="abrir-modal" class="fas fa-shopping-cart"></i>
 
-
-<script src="/javascripts/AtualizarPreco.js"></script>
-<script src="/javascripts/Carrinho.js"></script>
-<script src ="/javascripts/EnviarCarrinho.js" type ="module"></script>
-<script src ="javascripts/CarregarItens/Bebidas.js" type="module"></script>
-<script src ="javascripts/CarregarItens/Sobremesas.js" type="module"></script>
-<script src ="javascripts/CarregarItens/Pizza.js" type="module"></script>
-<script src ="javascripts/CarregarItens/Massa.js" type="module"></script>
-
-</body>
+    <script src="/javascripts/AtualizarPreco.js"></script>
+    <script src="/javascripts/Carrinho.js"></script>
+    <script src="/javascripts/EnviarCarrinho.js" type="module"></script>
+    <script src="javascripts/CarregarItens/Bebidas.js" type="module"></script>
+    <script
+      src="javascripts/CarregarItens/Sobremesas.js"
+      type="module"
+    ></script>
+    <script src="javascripts/CarregarItens/Pizza.js" type="module"></script>
+    <script src="javascripts/CarregarItens/Massa.js" type="module"></script>
+  </body>
 </html>

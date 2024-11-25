@@ -39,21 +39,26 @@ header h5 {
 
 .whatssap {
     position: fixed;
+    z-index: 1000;
     bottom: 20px;
     right: 20px;
-    z-index: 1000;
-    background-color: #25D366; 
+    background-color: hsl(142, 70%, 49%); 
+    bottom: 20px;
     color: white;
+    padding: 15px;
     border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    border-radius: 5px;
+    border-radius: 50%;
+    font-size: 30px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    transition: background-color 0.3s;
+    width: 60px;
+    height: 60px; 
 }
 
-.whatssap:hover {
-    background-color: #128C7E; 
+.whatssap i {
+    font-size: 30px; 
 }
 
 .organizar-botoes {
@@ -85,37 +90,6 @@ button.Ircardapio:hover, button.Logar:hover {
     padding: 20px;
 }
 
-.carrosel {
-    position: relative;
-    max-width: 800px;
-    margin: 20px auto;
-    overflow: hidden;
-    text-align: center;
-}
-
-.carrosel img {
-    width: 100%;
-    height: 400px; /* Ajuste a altura conforme necessário */
-    object-fit: cover; /* Isso mantém as imagens proporcionais e preenche o espaço */
-    display: block;
-}
-
-.botao-carrosel {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-}
-
-.botao-carrosel button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
 
 .depoimentos {
     background-color: rgb(231, 231, 231); 
@@ -173,6 +147,7 @@ button.Ircardapio:hover, button.Logar:hover {
 }
 
 .foto-prato {
+    object-fit: cover;
     display: inline-block;
     width: 30%;
     margin: 10px;
