@@ -26,4 +26,5 @@ router.get('/vizualizar', function(req, res) {
   res.render('Administrador/VizualizarPratos');
 });
 
+
 module.exports = router;
