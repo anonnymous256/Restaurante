@@ -26,5 +26,12 @@ router.get('/vizualizar', function(req, res) {
   res.render('Administrador/VizualizarPratos');
 });
 
+router.get('/Clientes', function(req, res) {
+  res.render('Administrador/Clientes');
+});
+
+router.get('/Funcionarios', function(req, res) {
+  res.render('Administrador/Funcionarios');
+});
 
 module.exports = router;
