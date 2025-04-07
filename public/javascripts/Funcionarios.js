@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
-import Funcionario from "./class/Funcionario.js";
+import Funcionario from "./class/funcionario.js";
 //var Cliente = require('./class/cliente.js');
 
 const firebaseConfig = {

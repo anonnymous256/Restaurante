@@ -1,9 +1,5 @@
-//const { db, collection, addDoc, limit, doc, getDoc, getDocs, where, updateDoc } = require("../firebase_config.js");
-
-//const { query } = require("../firebase_config.js");
-
 import { db, collection, addDoc, limit, doc, getDoc, getDocs, where, updateDoc } from "../firebase_config_test.js";
-import { query } from "../firebase_config.js";
+import { query } from "../firebase_config_test.js";
 
 class Funcionario {
     constructor(id = "", cpf, nome) {
@@ -25,7 +21,7 @@ class Funcionario {
         }
     }
 
-    async getFuncionario(cpf) {
+    async getFuncionarioByCpf(cpf) {
         const docRef = collection(db, "funcionario");
         const q = query(docRef, where("cpf", "==", cpf), limit(1));
         const querySnapshot = await getDocs(q);
