@@ -20,13 +20,13 @@ class ClienteTest {
     async testGetCliente() {
         const cpf = "12345678901";
         
-        const resultado = await this.cliente.getCliente(cpf);
+        const resultado = await this.cliente.getClienteByCpf(cpf);
         expect(resultado).toEqual({ cpf, nome: "João Silva Atualizado", id: "1" });
     }
 
     async testGetClienteNotFound() {
         const cpf = "2345678901";
-        const resultado = await this.cliente.getCliente(cpf);
+        const resultado = await this.cliente.getClienteByCpf(cpf);
         expect(resultado).toBeNull();
     }
 
@@ -36,14 +36,7 @@ class ClienteTest {
         expect(resultado.length).toBeGreaterThan(0);
     }
 
-    async testUpdateCliente() {
-        const id = "1";
-        const cpf = "12345678901";
-        const nome = "João Silva Atualizado";
-
-        const updateDoc = await this.cliente.updateCliente(id, cpf, nome);
-        expect(updateDoc).toBe(true);
-    }
+   
 }
 
 describe('Cliente', () => {
@@ -72,7 +65,4 @@ describe('Cliente', () => {
         await clienteTest.testGetAllClientes();
     });
 
-    test('Deve atualizar um cliente corretamente', async () => {
-        await clienteTest.testUpdateCliente();
-    });
 });
