@@ -17,6 +17,7 @@
   <h1>ADICIONAR LIVRO</h1>
 
   <form id="crudForm">
+    <input type="hidden" id="pratoId" value="">
     <label for="nome">Nome:</label>
     <input type="text" id="nome" required>
 
@@ -32,16 +33,26 @@
     <label for="categoria">Categoria:</label>
     <select id="categoria" required>
       <option value="">Selecione...</option>
-      <option value="Massa">história</option>
-      <option value="Pizza">Romance</option>
-      <option value="Sobremesa">Ação</option>
-      <option value="Bebidas">Terror</option>
+      <option value="História">História</option>
+      <option value="Romance">Romance</option>
+      <option value="Ação">Ação</option>
+      <option value="Terror">Terror</option>
     </select>
 
-    <button type="submit" class="Enviar">Adicionar Item</button>
+    <div class="button-group">
+      <button type="submit" class="Enviar" id="submitBtn">Adicionar Item</button>
+      <button type="button" class="Cancelar" id="cancelBtn" style="display: none;">Cancelar</button>
+    </div>
   </form>
 
-  <script type="module" src="/javascripts/firebase.js"></script>
+  <h2>LIVROS CADASTRADOS</h2>
+  
+  <div class="pratos-container" id="pratosLista">
+    <!-- Os pratos serão carregados aqui dinamicamente -->
+    <p id="loading">Carregando livros...</p>
+  </div>
+
+  <script type="module" src="/javascripts/addPrato.js"></script>
 
 </body>
 

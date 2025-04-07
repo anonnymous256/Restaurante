@@ -1,9 +1,10 @@
-// jest.config.js
 module.exports = {
     transform: {
-       "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
+        '^.+\\.jsx?$': 'babel-jest',
     },
-    testEnvironment: 'node',
-    
-  };
-  
+    transformIgnorePatterns: [
+        '/node_modules/(?!(@firebase|firebase))'
+    ],
+    moduleFileExtensions: ['js', 'jsx'],
+    testEnvironment: 'node'
+};

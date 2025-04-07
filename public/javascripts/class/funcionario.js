@@ -2,7 +2,7 @@
 
 //const { query } = require("../firebase_config.js");
 
-import { db, collection, addDoc, limit, doc, getDoc, getDocs, where, updateDoc } from "../firebase_config.js";
+import { db, collection, addDoc, limit, doc, getDoc, getDocs, where, updateDoc } from "../firebase_config_test.js";
 import { query } from "../firebase_config.js";
 
 class Funcionario {

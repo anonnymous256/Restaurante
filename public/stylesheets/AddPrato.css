@@ -1,143 +1,201 @@
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
 
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f7fc;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
-    }
-
-    .top-bar {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 10;
+.top-bar {
+  background-color: #333;
+  padding: 10px;
 }
 
 .back-button {
-  background-color: #8b0000;
-      color: white;
-      border: 2px solid #8b0000;
-      padding: 15px;
-      font-size: 1.5rem;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
 }
 
-.back-button:hover {
-  background-color: #500202;
-      border-color: #5e0404;
-      box-shadow: 0 4px 8px rgba(0, 86, 179, 0.3);
+h1 {
+  text-align: center;
+  color: #333;
+  margin: 20px 0;
 }
 
-.back-button:focus {
-  outline: none;
-      box-shadow: 0 0 0 4px rgba(126, 5, 5, 0.5);
+/* Estilos para o formulário */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
 
-    h1 {
-      font-size: 2.5rem;
-      color: #8b0000;
-      margin-top: 80px;
-      margin-bottom: 30px;
-      text-align: center;
-      font-weight: 600;
-      letter-spacing: 1px;
-    }
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 
-    form {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      max-width: 450px;
-      margin-bottom: 20px;
-      transition: all 0.3s ease;
-    }
+.button-group {
+  display: flex;
+  gap: 10px;
+}
 
-    form:hover {
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-    }
+.Enviar {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  flex: 1;
+}
 
-    label {
-      font-size: 1rem;
-      margin-bottom: 5px;
-      display: block;
-      font-weight: 500;
-    }
+.Enviar:hover {
+  background-color: #45a049;
+}
 
-    input, select, button {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-size: 1rem;
-      box-sizing: border-box;
-      transition: border-color 0.3s ease;
-    }
+.Cancelar {
+  background-color: #95a5a6;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  flex: 1;
+}
 
-    input:focus, select:focus {
-      border-color: #8b0000;
-      outline: none;
-    }
+.Cancelar:hover {
+  background-color: #7f8c8d;
+}
 
-    button {
-      background-color: #8b0000;
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-size: 1.1rem;
-      transition: background-color 0.3s ease;
-      padding: 15px;
-      border-radius: 8px;
-    }
+/* Estilos para a lista de pratos */
+h2 {
+  margin-top: 40px;
+  text-align: center;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-    button:hover {
-      background-color: #8b0000;
-    }
+.pratos-container {
+  margin: 30px auto;
+  padding: 0 20px;
+  max-width: 1200px;
+}
 
-    table {
-      width: 80%;
-      margin-top: 20px;
-      border-collapse: collapse;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    }
+.pratos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
 
-    th, td {
-      padding: 14px;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-    }
+.prato-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: white;
+}
 
-    th {
-      background-color: #8b0000;
-      color: white;
-    }
+.prato-card:hover {
+  transform: translateY(-5px);
+}
 
-    td {
-      background-color: #f9f9f9;
-    }
+.prato-img {
+  height: 200px;
+  overflow: hidden;
+}
 
-    tr:hover td {
-      background-color: #f1f1f1;
-    }
+.prato-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    
- 
+.prato-info {
+  padding: 15px;
+}
+
+.prato-info h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.categoria {
+  color: #666;
+  font-style: italic;
+  margin: 5px 0;
+}
+
+.preco {
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+.prato-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.edit-btn, .delete-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  flex: 1;
+  margin: 0 5px;
+}
+
+.edit-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #2980b9;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Mensagem de erro e carregamento */
+.error {
+  color: #e74c3c;
+  font-weight: bold;
+  text-align: center;
+}
+
+#loading {
+  text-align: center;
+  color: #7f8c8d;
+}
