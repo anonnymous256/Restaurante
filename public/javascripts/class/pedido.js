@@ -1,5 +1,5 @@
-//import { db, collection, addDoc, getDocs, query, where, limit } from "../firebase_config_.js";
-import { db, collection, addDoc, getDocs, query, where, limit } from "../firebase_config_test.js";
+import { db, collection, addDoc, getDocs, query, where, limit } from "../firebase_config.js";
+//import { db, collection, addDoc, getDocs, query, where, limit } from "../firebase_config_test.js";
 import Pagamento from "./Pagamento.js";
 
 class Pedido {

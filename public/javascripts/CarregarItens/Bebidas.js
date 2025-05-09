@@ -18,7 +18,7 @@
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
 
-    async function carregarItensCardapio(categoriaSelecionada = "Bebidas") {
+    async function carregarItensCardapio(categoriaSelecionada = "Terror") {
     const listaCardapio = document.getElementById('lista-Bebidas');
     listaCardapio.innerHTML = ""; 
 
@@ -71,6 +71,6 @@
 
 // Carrega os itens ao carregar a página
 document.addEventListener("DOMContentLoaded", function() {
-    carregarItensCardapio("Bebidas"); 
+    carregarItensCardapio("Terror"); 
 });
 

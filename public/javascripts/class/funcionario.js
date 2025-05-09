@@ -1,5 +1,5 @@
-import { db, collection, addDoc, limit, doc, getDoc, getDocs, where, updateDoc } from "../firebase_config_test.js";
-import { query } from "../firebase_config_test.js";
+//import { db, collection, addDoc, limit, doc, getDoc, getDocs, where, updateDoc } from "../firebase_config.js";
+import { db, collection, addDoc, query, where, getDocs, limit } from "../firebase_config.js";
 
 class Funcionario {
     constructor(id = "", cpf, nome) {
@@ -10,7 +10,7 @@ class Funcionario {
 
     async addFuncionario(cpf, nome) {
         try {
-            const docRef = await addDoc(collection(db, "funcionario"), {
+            const docRef = await addDoc(collection(db, "funcionarios"), {
                 cpf,
                 nome
             });
@@ -22,7 +22,7 @@ class Funcionario {
     }
 
     async getFuncionarioByCpf(cpf) {
-        const docRef = collection(db, "funcionario");
+        const docRef = collection(db, "funcionarios");
         const q = query(docRef, where("cpf", "==", cpf), limit(1));
         const querySnapshot = await getDocs(q);
 
@@ -35,12 +35,12 @@ class Funcionario {
     }
 
     static async getFuncionarios() {
-        const querySnapshot = await getDocs(collection(db, "funcionario"));
+        const querySnapshot = await getDocs(collection(db, "funcionarios"));
         return querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
     }
 
     async updateFuncionario(id, cpf, nome) {
-        const docRef = doc(db, "funcionario", id);
+        const docRef = doc(db, "funcionarios", id);
         try {
             await updateDoc(docRef, {
 

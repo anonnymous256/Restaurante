@@ -1,5 +1,5 @@
-import { db, collection, addDoc, query, where, getDocs, limit } from "../firebase_config_test.js";
-//import { db, collection, addDoc, query, where, getDocs, limit } from "../firebase_config.js";
+//import { db, collection, addDoc, query, where, getDocs, limit } from "../firebase_config_test.js";
+import { db, collection, addDoc, query, where, getDocs, limit } from "../firebase_config.js";
 
 
 class Cliente {

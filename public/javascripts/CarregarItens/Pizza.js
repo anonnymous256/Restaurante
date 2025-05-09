@@ -18,7 +18,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-async function carregarItensCardapio(categoriaSelecionada = "Pizza") {
+async function carregarItensCardapio(categoriaSelecionada = "Romance") {
   const listaCardapio = document.getElementById("lista-Pizzas");
   listaCardapio.innerHTML = "";
 
@@ -74,5 +74,5 @@ async function carregarItensCardapio(categoriaSelecionada = "Pizza") {
 
 // Carrega os itens ao carregar a página
 document.addEventListener("DOMContentLoaded", function () {
-  carregarItensCardapio("Pizza");
+  carregarItensCardapio("Romance");
 });

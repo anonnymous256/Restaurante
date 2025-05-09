@@ -1,5 +1,5 @@
-//import { db, collection, addDoc, doc, getDoc, getDocs, updateDoc, deleteDoc, } from "../firebase_config.js";
-import { db, collection, addDoc, doc, getDoc, getDocs, updateDoc, deleteDoc, } from "../firebase_config_test.js";
+import { db, collection, addDoc, doc, getDoc, getDocs, updateDoc, deleteDoc, } from "../firebase_config.js";
+//import { db, collection, addDoc, doc, getDoc, getDocs, updateDoc, deleteDoc, } from "../firebase_config_test.js";
 class Prato {
     constructor(id = "", nome, descricao, imagem, preco, categoria) {
         this.id = id;

@@ -1,5 +1,5 @@
-import { db, collection, getDocs, query, where } from "../firebase_config_test.js";
-//import { db, collection, getDocs, query, where } from "../firebase_config.js";
+//import { db, collection, getDocs, query, where } from "../firebase_config_test.js";
+import { db, collection, getDocs, query, where } from "../firebase_config.js";
 
 //const { db, collection, getDocs, query, where } = require("../firebase_config.js");
 
