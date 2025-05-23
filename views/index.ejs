@@ -41,6 +41,25 @@
         </div>
     </div>
 
+    <!-- Modal de Avaliação -->
+    <div id="modal-avaliacao" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModalAvaliacao()">&times;</span>
+            <h2>Deixe sua avaliação</h2>
+            <form id="avaliacao-form" onsubmit="event.preventDefault(); enviarAvaliacao();">
+                <div class="form-group">
+                    <label for="nome">Seu nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Sua avaliação:</label>
+                    <textarea id="descricao" name="descricao" rows="4" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
     <!-- Logo e título -->
     <header>
         <img src="images/Logo.png" alt="Logo do Restaurante">
@@ -49,6 +68,9 @@
         <div class="organizar-botoes">
             <button class="Ircardapio" onclick="window.location.href = '/Cardapio'">Catálogo</button>
             <button class="Logar" onclick="abrirModal()">Logar</button>
+            
+            <button  class="Logar" onclick="abrirModalAvaliacao()">avaliação</button>
+        
         </div>
     </header>
 
@@ -86,14 +108,84 @@
             <p><strong>Emilly Ferreira</strong></p>
             <p>"Ambiente acolhedor e livros incríveis! Com certeza voltarei mais vezes."</p>
         </div>
+    
+        
     </div>
 
     <footer>
         <p>&copy; 2025 Livraria La Granolas. Todos os direitos reservados.</p>
     </footer>
 
+   
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+    <script>
+       const firebaseConfig = {
+      apiKey: "AIzaSyBmltChBbiMDZOB26QOeuSMt8Hi8kuu1Lg",
+      authDomain: "restaurante-eb4cc.firebaseapp.com",
+      projectId: "restaurante-eb4cc",
+      storageBucket: "restaurante-eb4cc.appspot.com",
+      messagingSenderId: "328765970187",
+      appId: "1:328765970187:web:5d75b96ef982b96b0d740e",
+      measurementId: "G-PK6S3XR105"
+    };
+
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+
     <script src="/javascripts/carrosel.js"></script>
     <script src="/javascripts/modal.js"></script>
+    
+    <script>
+        function abrirModalAvaliacao() {
+            document.getElementById('modal-avaliacao').style.display = 'block';
+        }
+        
+        function fecharModalAvaliacao() {
+            document.getElementById('modal-avaliacao').style.display = 'none';
+        }
+        
+        function enviarAvaliacao() {
+            const nome = document.getElementById('nome').value;
+            const descricao = document.getElementById('descricao').value;
+   
+            const avaliacao = {
+                nome: nome,
+                descricao: descricao,
+                data: new Date()
+            };
+            
+            db.collection("avaliacoes").add(avaliacao)
+                .then((docRef) => {
+                    console.log("Avaliação salva com ID: ", docRef.id);
+                    alert(`Obrigado pela sua avaliação, ${nome}!`);
+                    fecharModalAvaliacao();
+                    
+                  
+                    document.getElementById('avaliacao-form').reset();
+                })
+                .catch((error) => {
+                    console.error("Erro ao salvar avaliação: ", error);
+                    alert("Ocorreu um erro ao salvar sua avaliação. Por favor, tente novamente.");
+                });
+        }
+        
+
+        window.onclick = function(event) {
+            const modalAvaliacao = document.getElementById('modal-avaliacao');
+            const modalLogin = document.getElementById('modal-login');
+            
+            if (event.target == modalAvaliacao) {
+                modalAvaliacao.style.display = 'none';
+            }
+            
+            if (event.target == modalLogin) {
+                modalLogin.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 
 </html>
